@@ -18,8 +18,55 @@
     </section>
 
     <section class="mt-4 row justify-content-center">
-      <div class="col-lg-6 card">
-        <h1>FORM</h1>
+      <div class="col-lg-6 card p-0">
+        <h4 class="card-header">Masukkan data</h4>
+
+        <form id="main-form" class="card-body">
+          <div class="mb-4">
+            <label for="meanRapot" class="form-label">Nilai Rata-Rata Rapot</label>
+            <input type="text" class="form-control" id="meanRapot">
+          </div>
+
+          <div id="pilihan1" class="mb-4">
+            <h5>Pilihan pertama</h5>
+
+            <div class="mb-3">
+              <label class="form-label">Universitas</label>
+              <select class="universitas form-select" disabled>
+                <!-- Ambil data secara dinamis -->
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Jurusan</label>
+              <select class="jurusan form-select" disabled>
+                <!-- Ambil data secara dinamis -->
+              </select>
+            </div>
+          </div>
+
+          <div id="pilihan2" class="mb-5">
+            <h5>Pilihan kedua</h5>
+
+            <div class="mb-3">
+              <label class="form-label">Universitas</label>
+              <select class="universitas form-select" disabled>
+                <!-- Ambil data secara dinamis -->
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Jurusan</label>
+              <select class="jurusan form-select" disabled>
+                <!-- Ambil data secara dinamis -->
+              </select>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" id="submit" class="btn btn-primary">Kalkulasi</button>
+          </div>
+        </form>
       </div>
     </section>
 
