@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from typing import Optional
 import sqlite3
 
 conn = sqlite3.connect('data-snmptn.db')
@@ -20,3 +21,24 @@ async def get_universitas():
 
     cursor.close()
     return {'list-universitas': result}
+
+
+@app.get('/list-jurusan')
+async def get_jurusan(universitas: Optional[str] = None):
+    cursor = conn.cursor()
+
+    query_result = []
+    result = []
+
+    if universitas:
+        query_result = cursor.execute(
+            'SELECT DISTINCT nama FROM Jurusan WHERE universitas=?',
+            universitas
+        )
+    else:
+        query_result = cursor.execute('SELECT nama FROM Jurusan')
+
+    for row in query_result:
+        result.append(row[0])
+
+    return {'list-jurusan': result}
