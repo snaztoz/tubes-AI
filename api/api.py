@@ -1,9 +1,12 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 import sqlite3
 
 conn = sqlite3.connect('data-snmptn.db')
 app = FastAPI()
+
+app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods=['*'])
 
 
 @app.get('/')
@@ -32,8 +35,8 @@ async def get_jurusan(universitas: Optional[str] = None):
 
     if universitas:
         query_result = cursor.execute(
-            'SELECT DISTINCT nama FROM Jurusan WHERE universitas=?',
-            universitas
+            'SELECT DISTINCT nama FROM Jurusan WHERE universitas=:universitas',
+            {'universitas': universitas}
         )
     else:
         query_result = cursor.execute('SELECT nama FROM Jurusan')
