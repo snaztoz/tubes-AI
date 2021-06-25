@@ -62,4 +62,42 @@ $(document).ready(function() {
             $(`.jurusan-${which}`).append(`<option value="${jurusan}">${jurusan}</option>`)
         })
     });
+
+
+    /**
+     * Melakukan validasi ke field mean rapot.
+     *
+     * Return [nilai, errorMsg]
+     */
+    function validateMeanRapot() {
+        const val = $('#mean-rapot').val().trim()
+
+        if (val === '') {
+            return [null, 'field tidak boleh kosong']
+        } else if (isNaN(val)) {
+            return [null, 'field hanya dapat diisi angka']
+        } else if (Number(val) < 0) {
+            return [null, 'angka yang dimasukkan tidak boleh bernilai negatif']
+        }
+
+        return [Number(val), null]
+    }
+
+
+    $('#main-form').submit(function(event) {
+        $('#mean-rapot-err').addClass('d-none')
+
+        const [mean, errMsg] = validateMeanRapot()
+        if (errMsg) {
+            $('#mean-rapot-err').html(`* ${errMsg}`)
+            $('#mean-rapot-err').removeClass('d-none')
+
+            event.preventDefault()
+            return
+        }
+
+        // TODO: fetch result ke API
+        event.preventDefault()
+        console.log(mean)
+    });
 })
