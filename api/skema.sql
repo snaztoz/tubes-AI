@@ -1,33 +1,23 @@
 CREATE TABLE Jurusan (
     id INTEGER PRIMARY KEY,
-    nama VARCHAR(128) NOT NULL,
-    universitas VARCHAR(128) NOT NULL,
-    kuota INTEGER NOT NULL,
-    peminat INTEGER NOT NULL,
-    tahun INTEGER NOT NULL
+    pt VARCHAR(8) NOT NULL,
+    jurusan_fakultas VARCHAR(32) NOT NULL
 );
 
-CREATE TABLE HasilPendaftaran (
+CREATE TABLE JurusanPerTahun (
     id INTEGER PRIMARY KEY,
-    deskripsi VARCHAR(32)
+    id_jurusan INTEGER NOT NULL,
+    tahun INTEGER NOT NULL,
+    keketatan DECIMAL(9, 9) NOT NULL,
+
+    FOREIGN KEY (id_jurusan) REFERENCES Jurusan(id)
 );
 
-INSERT INTO HasilPendaftaran
-VALUES
-    (1, 'lolos di pilihan 1'),
-    (2, 'lolos di pilihan 2'),
-    (3, 'tidak lolos');
+CREATE TABLE Pendaftaran (
+    id_pendaftar VARCHAR(9) PRIMARY KEY,
+    nilai DECIMAL(6, 4) NOT NULL,
+    pilihan INTEGER NOT NULL,
+    pendaftar_diterima INTEGER NOT NULL,
 
-CREATE TABLE Siswa (
-    id INTEGER PRIMARY KEY,
-    rata_rata_rapot FLOAT NOT NULL,
-    rangking INTEGER,
-    pilihan_1 INTEGER,
-    pilihan_2 INTEGER,
-    hasil_pendaftaran INTEGER NOT NULL,
-    tahun_angkatan INTEGER NOT NULL,
-
-    FOREIGN KEY (pilihan_1) REFERENCES Jurusan(id),
-    FOREIGN KEY (pilihan_2) REFERENCES Jurusan(id),
-    FOREIGN KEY (hasil_pendaftaran) REFERENCES HasilPendaftaran(id)
+    FOREIGN KEY (pilihan) REFERENCES JurusanPerTahun(id)
 );
