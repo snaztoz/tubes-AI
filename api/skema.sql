@@ -19,6 +19,7 @@ CREATE TABLE JurusanPerTahun (
 CREATE TABLE Pendaftaran (
     id_pendaftar VARCHAR(9) PRIMARY KEY,
     nilai DECIMAL(6, 4) NOT NULL,
+    rank_angkatan DECIMAL(10, 9) NOT NULL,
     pilihan INTEGER NOT NULL,
     pendaftar_diterima INTEGER NOT NULL,
 
