@@ -1,0 +1,305 @@
+UGM/Kedokteran, FKKMK
+ITB/SF
+ITB/STEI
+ITS/Teknik Elektro, FTI
+UGM/Teknik Industri, FT
+ITB/STEI
+UNS/Kedokteran, FK
+ITB/FTTM
+UGM/Kedokteran, FKKMK
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+UGM/Kedokteran, FKKMK
+UGM/Farmasi, FF
+UNS/Kedokteran, FK
+ITB/FTMD
+UNS/Kedokteran, FK
+ITS/Teknik Industri, FTIRS
+ITB/FTI
+UNS/Kedokteran, FK
+ITB/FTTM
+UNS/Kedokteran, FK
+UNSOED/Kedokteran, FK
+UNS/Farmasi, FMIPA
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+UGM/Teknik Sipil, FT
+UGM/Kedokteran Gigi, FKG
+UNS/Kedokteran, FK
+UGM/Akuntansi, FEB
+ITB/SF
+ITB/FTTM
+UNS/Kedokteran, FK
+UGM/Teknik Industri, FT
+UNSOED/Kedokteran, FK
+ITB/STEI
+UGM/Arsitektur, FT
+UNS/Teknik Kimia, FT
+UGM/Teknik Kimia, FT
+UNS/Teknik Industri, FT
+UGM/Teknik Industri, FT
+UGM/Ilmu Gizi, FKKMK
+UGM/Farmasi, FF
+ITB/FTMD
+UNS/Teknik Industri, FT
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+ITB/FTSL
+UGM/Farmasi, FF
+UGM/Farmasi, FF
+UNS/Kedokteran, FK
+ITB/FTSL
+UGM/Aktuaria, FMIPA
+ITS/Aristektur, FADP
+UGM/Teknik Sipil, FT
+UNS/Teknik Sipil, FT
+UGM/Akuntansi, FEB
+UGM/Teknik Industri, FT
+UGM/Teknik Elektro, FT
+UNS/Teknik Industri, FT
+UGM/Teknik Elektro, FT
+ITS/Arsitektur, FADP
+UNS/Teknik Industri, FT
+ITB/FTSL
+UGM/Aktuaria, FMIPA
+UGM/Psikologi, Fpsi
+UGM/Kedokteran Gigi, FKG
+UGM/Kedokteran Gigi, FKG
+UNS/Teknik Industri, FT
+UGM/Teknik Industri, FT
+UGM/Ilmu Komputer, FMIPA
+UNS/Agroteknologi, FP
+UGM/Kedokteran Gigi, FKG
+UNS/Arsitektur, FT
+UNS/Psikologi, FK
+UNS/Arsitektur, FT
+UNS/Teknik Industri, FT
+ITS/Teknik Industri, FTI
+UNS/Teknik Sipil, FT
+UNS/Informatika, FMIPA
+UGM/Teknik Mesin, FT
+UNS/Teknik Industri, FT
+UNS/Informatika, FMIPA
+UGM/Arsitektur, FT
+UGM/Akuntansi, FEB
+UGM/Teknik Mesin, FT
+UGM/Kedokteran Hewan, FKH
+ITB/FTTM
+UNS/Informatika, FMIPA
+UNS/Teknik Sipil, FT
+UNS/Arsitektur, FT
+UNS/Teknik Industri, FT
+UGM/Teknologi Informasi, FT
+UNS/Teknik Sipil, FT
+UGM/Kimia, FMIPA
+UNS/Agribisnis, FP
+UNS/Teknik Mesin, FT
+UGM/Kedokteran Hewan, FKH
+UNS/Teknik Mesin, FT
+UNS/Teknik Industri, FT
+UNS/Teknik Industri, FT
+UNS/Arsitektur, FT
+UNS/Informatika, FMIPA
+UNS/D3 Teknik Sipil, FT
+UNS/Kedokteran, FK
+UNEJ/Kedokteran Gigi, FKG
+UNS/Agroteknologi, FP
+UNS/D3 Farmasi, FMIPA
+UGM/Akuntansi, FEB
+UNS/Psikologi, FK
+UNS/D3 Manajemen Bisnis, FEB
+UNS/D4 Kebidanan, FK
+UNS/Psikologi, FK
+ITB/FTMD
+UGM/Kedokteran, FKKMK
+UGM/Teknik Sipil, FT
+UGM/Kedokteran Gigi, FKG
+UGM/Arsitektur, FT
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+ITB/FTMD
+UGM/Kedokteran, FKKMK
+UGM/Teknologi Informasi, FT
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+ITB/STEI
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+ITB/FTI
+UNS/Kedokteran, FK
+ITB/STEI
+UNS/Kedokteran, FK
+UGM/Farmasi, FF
+UGM/Aktuaria, FMIPA
+UNS/Kedokteran, FK
+ITB/FTI
+ITS/Teknik Informatika, FTIK
+UNS/Pendidikan Matematika, FKIP
+UNS/Kedokteran, FK
+UGM/Farmasi, FF
+ITB/STEI
+ITB/FTSL
+ITB/SAPPK
+UGM/Teknologi Informasi, FT
+UNS/Kedokteran, FK
+ITS/Teknik Informatika, FTIK
+UGM/Teknik Sipil, FT
+ITB/FTTM
+UGM/Kedokteran Gigi, FKG
+UNS/Pendidikan Kimia, FKIP
+UGM/Arsitektur, FT
+UNS/Teknik Industri, FT
+UGM/Kedokteran Gigi, FKG
+UGM/Teknologi Informasi, FT
+ITB/FTSL
+UGM/Kedokteran Gigi, FKG
+UGM/Perencanaan Wilayah dan Kota
+UGM/Teknik Elektro, FT
+UGM/Arsitektur, FT
+UNS/Teknik Industri, FT
+ITB/FTTM
+UGM/Ilmu Gizi, FKKMK
+UGM/Kedokteran Gigi, FKG
+ITB/FTTM
+UGM/Farmasi, FF
+UGM/Teknologi Pangan dan Hasil Pertanian, FTP
+UNS/Teknik Sipil, FT
+ITB/STEI
+UNS/Farmasi, FMIPA
+UGM/Teknik Mesin, FT
+ITB/FTSL
+UGM/Teknik Elektro, FT
+UNS/Farmasi, FMIPA
+UGM/Aktuaria, FMIPA
+UNS/Pendidikan Matematika, FKIP
+UGM/Teknik Pertanian dan Biosistem, FTP
+UGM/Teknologi Pangan dan Hasil Pertanian, FTP
+UNS/Teknik Kimia, FT
+UNS/Kedokteran, FK
+UGM/Teknik Geologi, FT
+UGM/Teknik Mesin, FT
+UGM/Teknik Biomedis, FT
+UNS/Farmasi, FMIPA
+UNS/Informatika, FMIPA
+UNS/Teknik Sipil, FT
+UNS/Informatika, FMIPA
+UNS/Akuntansi, FEB
+UGM/Biologi, FMIPA
+UGM/Teknik Pertanian dan Biosistem, FTP
+UNS/Kedokteran, FK
+UGM/Teknik Geologi, FT
+UNS/Psikologi, FK
+ITS/Teknik Kelautan, FTK
+UGM/Teknik Geodesi, FT
+UNS/Teknik Industri, FT
+UGM/Teknik Biomedis, FT
+UNS/Kedokteran, FK
+UNS/Teknik Industri, FT
+UNS/Psikologi, FK
+UNS/Teknik Kimia, FT
+UNS/Teknik Elektro, FT
+UNS/Teknik Sipil, FT
+UNS/Teknik Industri, FT
+UNS/Psikologi, FK
+UNS/Teknik Elektro, FT
+UNS/Teknik Industri, FT
+ITB/STEI
+ITB/STEI
+UNS/Kedokteran, FK
+UGM/Kedokteran Hewan, FKH
+UNS/Kedokteran, FK
+UNS/Kedokteran, FK
+UGM/Kedokteran, FKKMK
+UGM/Aktuaria, FMIPA
+ITB/FTSL
+ITB/FMIPA
+UNS/Kedokteran, FK
+ITB/FTI
+ITB/FTI
+ITB/FTMD
+UNS/Kedokteran, FK
+UGM/Teknologi Informasi, FT
+UNS/Kedokteran, FK
+UGM/Teknik Sipil, FT
+UGM/Kedokteran Gigi, FKG
+UNS/Teknik Industri, FT
+ITB/STEI
+ITB/FTTM
+UGM/Kedokteran, FKKMK
+UGM/Statistika, MIPA
+UGM/Elektronika dan Instrumentasi, FT
+ITB/FTMD
+UGM/Statistika, FMIPA
+UGM/Kedokteran Hewan, FKH
+UNS/Teknik Sipil, FT
+UGM/Psikologi, FPsi
+UGM/Kedokteran Gigi, FKG
+ITB/FTSL
+UGM/Farmasi, FF
+UNS/Teknik Industri, FT
+UGM/Arsitektur, FT
+ITB/FTTM
+UGM/Kedokteran Gigi, FKG
+ITB/FMIPA
+UNS/DKV, FSRD
+UNS/Teknik Sipil, FT
+UGM/Fisika, FMIPA
+UGM/Farmasi, FF
+UNS/Matematika, FMIPA
+UGM/Statistika, FMIPA
+UGM/Aktuaria, FMIPA
+UGM/Teknik Sipil, FT
+UNS/Arsitektur, FT
+UGM/Teknik Biomedis, FT
+UGM/Teknik Elektro, FT
+UNS/Psikologi, FK
+UNS/Teknik Elektro, FT
+UNS/Teknik Industri, FT
+ITS/Teknik Industri, FTI
+UNS/Teknik Industri, FT
+UNS/Teknik Mesin, FT
+UNS/Kedokteran, FK
+UGM/Teknik Biomedis, FT
+UNS/Informatika, FMIPA
+UNS/Pendidikan Fisika, FKIP
+UGM/Teknik Geodesi, FT
+UNS/Teknik Mesin, FT
+UNS/Kedokteran, FK
+UNS/Teknik Industri, FT
+UNS/Teknik Elektro, FT
+UGM/Teknik Biomedis, FT
+ITS/Teknik Industri, FTI
+UNS/Teknik Mesin, FT
+UNS/DKV, FSRD
+UGM/Farmasi, FF
+UNS/Teknik Mesin, FT
+UNS/Kedokteran, FK
+UGM/Teknik Biomedis, FT
+UNS/Agroteknologi, FP
+UNS/Perencanaan Wilayah dan Kota, FT
+UNS/Ilmu Teknologi Pangan, FP
+UNS/Teknik Industri, FT
+UNS/Teknik Sipil, FT
+UNS/Farmasi, MIPA
+UNS/Arsitektur, FT
+UNS/Perencanaan Wilayah dan Kota, FT
+UNS/Arsitektur, FT
+UGM/Ilmu Keperawatan, FKKMK
+UNS/Agribisnis, FP
+UNS/Agribisnis, FP
+UGM/Ekonomi Pertanian dan Agribisnis, FTP
+UGM/Matematika, FMIPA
+UGM/Teknik Pertanian, FTP
+ITS/Teknik Elektro, FTI
+UNS/Teknik Sipil, FT
+ITS/Perencanaan Wilayah dan Kota, FTSP
+UNS/Teknik Mesin, FT
+UNS/Arsitektur, FT
+UNS/Teknik Kimia, FT
+UNS/Teknik Kimia, FT
+UGM/Ekonomi Pertanian dan Agribisnis, FTP
+UNS/Agroteknologi, FP
+UNS/Arsitektur, FT
+ITS/Teknik Elektro, FTI
+UNS/Teknik Sipil, FT
