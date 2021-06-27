@@ -1,7 +1,9 @@
 CREATE TABLE Jurusan (
     id INTEGER PRIMARY KEY,
     pt VARCHAR(8) NOT NULL,
-    jurusan_fakultas VARCHAR(32) NOT NULL
+    jurusan_fakultas VARCHAR(32) NOT NULL,
+
+    UNIQUE(pt, jurusan_fakultas)
 );
 
 CREATE TABLE JurusanPerTahun (
@@ -10,6 +12,7 @@ CREATE TABLE JurusanPerTahun (
     tahun INTEGER NOT NULL,
     keketatan DECIMAL(9, 9) NOT NULL,
 
+    UNIQUE(id_jurusan, tahun),
     FOREIGN KEY (id_jurusan) REFERENCES Jurusan(id)
 );
 
