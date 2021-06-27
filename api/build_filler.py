@@ -65,10 +65,12 @@ with open(FILLER['pendaftaran']) as f:
         nilai            = float(stripped_line[1].replace(',', '.'))
         tahun_pt_jurusan = stripped_line[2]
         hasil            = stripped_line[3].upper()
+        rank             = float(stripped_line[4])
 
         pendaftaran[kode_pendaftar] = (
             kode_pendaftar,
             nilai,
+            rank,
             unique_jurusan_tahun[tahun_pt_jurusan][0],
             1 if hasil == 'DITERIMA' else 0
         )
@@ -87,7 +89,7 @@ def build_sql(data):
     for table_name, rows in data.items():
         sql += f'INSERT INTO {table_name} VALUES '
         sql += ', '.join(rows)
-        sql += ';'
+        sql += ';\n'
 
     with open('filler.sql', 'w') as f:
         f.write(sql)
