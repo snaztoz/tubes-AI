@@ -1,3 +1,4 @@
 api/__pycache__/
+api/fill/
 api/venv/
 api/*.db
