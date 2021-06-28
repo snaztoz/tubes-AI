@@ -25,6 +25,25 @@ $(document).ready(function() {
 
 
     /**
+     * Menjalankan kalkulasi prediksi di server. Lakukan sinkronisasi
+     * di caller.
+     */
+    function fetchPrediction(nilai, rank, universitas, jurusan) {
+        const url = 'http://localhost:8000/calculate'
+                    + `?nilai=${nilai}`
+                    + `&rank=${rank}`
+                    + `&universitas=${universitas}`
+                    + `&jurusan=${jurusan}`
+
+        return (async () => {
+            const res = await fetch(url)
+            const data = await res.json()
+            return data['result']
+        })()
+    }
+
+
+    /**
      * Init fetch ketika page baru pertama kali load.
      */
     (async function() {
@@ -126,8 +145,45 @@ $(document).ready(function() {
             return
         }
 
-        // TODO: fetch result ke API
         event.preventDefault()
-        console.log(mean)
+
+        const pilihan1 = {
+            universitas: $('.universitas-1').val(),
+            jurusan: $('.jurusan-1').val()
+        }
+        const pilihan2 = {
+            universitas: $('.universitas-2').val(),
+            jurusan: $('.jurusan-2').val()
+        }
+
+        Promise.all([
+            fetchPrediction(mean, rank, pilihan1.universitas, pilihan1.jurusan),
+            fetchPrediction(mean, rank, pilihan2.universitas, pilihan2.jurusan),
+        ])
+        .then(results => {
+            displayResults(results)
+
+            $('#submit').prop('disabled', false)
+            $('#submit-loading').addClass('d-none')
+        })
+
+        $('#submit').prop('disabled', true)
+        $('#submit-loading').removeClass('d-none')
     });
+
+
+    function displayResults(results) {
+        const layout = $('#result-layout').html()
+        $('#result-container').html(layout)
+
+        const acc = $('#result-accepted').html()
+        const rej = $('#result-rejected').html()
+
+        $('#result-container #result-pilihan-1').append(
+            results[0] === 'DITERIMA'? acc : rej
+        );
+        $('#result-container #result-pilihan-2').append(
+            results[1] === 'DITERIMA'? acc : rej
+        );
+    }
 })

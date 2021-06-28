@@ -73,11 +73,34 @@
           </div>
 
           <div class="text-center">
-            <button type="submit" id="submit" class="btn btn-primary">Kalkulasi</button>
+            <button type="submit" id="submit" class="btn btn-primary">
+              <span id="submit-loading" class="d-none spinner-border spinner-border-sm"
+                  role="status" aria-hidden="true"></span>
+              Kalkulasi
+            </button>
           </div>
         </form>
       </div>
     </section>
+
+    <template id="result-layout">
+      <div class="d-flex justify-content-around">
+        <div id="result-pilihan-1" class="d-flex flex-column align-items-center">
+          <p class="m-0 mb-1">Pilihan 1</p>
+        </div>
+        <div id="result-pilihan-2" class="d-flex flex-column align-items-center">
+          <p class="m-0 mb-1">Pilihan 2</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="result-accepted">
+      <h2 class="text-success">Diterima</h2>
+    </template>
+
+    <template id="result-rejected">
+      <h2 class="text-danger">Tidak Diterima</h2>
+    </template>
 
     <script src="script.js"></script>
   </body>
