@@ -26,7 +26,20 @@ async def get_universitas():
     cursor = conn.cursor()
 
     result = []
-    for row in cursor.execute('SELECT DISTINCT pt FROM Jurusan'):
+    cursor.execute('''
+        SELECT DISTINCT
+            pt
+        FROM
+            Jurusan
+        JOIN
+            JurusanPerTahun ON JurusanPerTahun.id_jurusan = Jurusan.id
+        WHERE
+            tahun = :year;
+        ''',
+        {'year': CURRENT_YEAR}
+    )
+
+    for row in cursor.fetchall():
         result.append(row[0])
 
     cursor.close()
@@ -42,9 +55,16 @@ async def get_jurusan(universitas: Optional[str] = None):
 
     if universitas:
         query_result = cursor.execute('''
-            SELECT DISTINCT jurusan_fakultas FROM Jurusan WHERE pt=:pt
+            SELECT DISTINCT
+                jurusan_fakultas
+            FROM
+                Jurusan
+            JOIN
+                JurusanPerTahun ON JurusanPerTahun.id_jurusan = Jurusan.id
+            WHERE
+                pt = :pt AND tahun = :year
             ''',
-            {'pt': universitas}
+            {'pt': universitas, 'year': CURRENT_YEAR}
         )
     else:
         query_result = cursor.execute('SELECT DISTINCT jurusan_fakultas FROM Jurusan')
