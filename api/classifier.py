@@ -1,7 +1,11 @@
 import sqlite3
 
 
-def __with_db_context(db_path, fn):    
+__string_numerics_counter = 1
+__string_numerics = {}
+
+
+def __with_db_context(db_path, fn):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     result = fn(cursor)
@@ -14,15 +18,33 @@ def __with_db_context(db_path, fn):
 def __get_past_dataset(cursor):
     cursor.execute('''
         SELECT
-            keketatan, nilai, rank_angkatan, pendaftar_diterima
+            keketatan, nilai, rank_angkatan,
+            pt || '/' || jurusan_fakultas, pendaftar_diterima
         FROM
             JurusanPerTahun
+        JOIN
+            Jurusan ON Jurusan.id = JurusanPerTahun.id_jurusan
         JOIN
             Pendaftaran ON Pendaftaran.pilihan = JurusanPerTahun.id
         WHERE tahun < 2021;
         '''
     )
-    return cursor.fetchall()
+    dataset = cursor.fetchall()
+
+    global __string_numerics_counter
+    global __string_numerics
+
+    # Konversi string pt_jurusan ke bentuk integer
+    for i, data in enumerate(dataset):
+        pt_jurusan = data[3]
+        if pt_jurusan not in __string_numerics:
+            __string_numerics[pt_jurusan] = __string_numerics_counter
+            __string_numerics_counter += 1
+        temp = list(data)
+        temp[3] = __string_numerics[pt_jurusan]
+        dataset[i] = tuple(temp)
+
+    return dataset
 
 
 class DiscreteDataset:
@@ -94,7 +116,7 @@ class DiscreteDataset:
             for i in indexes:
                 attrs_max[i] = data[i] if attrs_max[i] < data[i] else attrs_max[i]
                 attrs_min[i] = data[i] if attrs_min[i] > data[i] else attrs_min[i]
-        
+
         # Klasifikasi
         new_dataset = []
         for data in raw_dataset:
@@ -139,13 +161,16 @@ class DiscreteDataset:
 
 
 raw_past_dataset = __with_db_context('data-snmptn.db', __get_past_dataset)
-past_dataset = DiscreteDataset.from_dataset(raw_past_dataset, [0, 1, 2], 3)
+past_dataset = DiscreteDataset.from_dataset(raw_past_dataset, [0, 1, 2, 3], 4)
 
 
 # Public API dari classifier.
 #
 # Parameter dataset berupa list/tuple yang urutan elemennya
 # seperti berikut:
-#       keketatan, nilai rata-rata, rank angkatan
+#       keketatan, nilai rata-rata, rank angkatan, pt/jurusan
 def classify(data):
+    temp = list(data)
+    temp[3] = __string_numerics.get(temp[3]) or 0
+    data = tuple(temp)
     return past_dataset.classify(data)
