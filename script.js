@@ -84,13 +84,43 @@ $(document).ready(function() {
     }
 
 
+    /**
+     * Melakukan validasi ke field rank angkatan.
+     *
+     * Return [nilai, errorMsg]
+     */
+    function validateRankAngkatan() {
+        const val = $('#rank-angkatan').val().trim()
+
+        if (val === '') {
+            return [null, 'field tidak boleh kosong']
+        } else if (!Number.isInteger(Number(val))) {
+            return [null, 'field hanya dapat diisi bilangan bulat positif']
+        } else if (Number(val) < 0) {
+            return [null, 'angka yang dimasukkan tidak boleh bernilai negatif']
+        }
+
+        return [Number(val), null]
+    }
+
+
     $('#main-form').submit(function(event) {
         $('#mean-rapot-err').addClass('d-none')
+        $('#rank-angkatan-err').addClass('d-none')
 
-        const [mean, errMsg] = validateMeanRapot()
-        if (errMsg) {
-            $('#mean-rapot-err').html(`* ${errMsg}`)
+        const [mean, meanErrMsg] = validateMeanRapot()
+        if (meanErrMsg) {
+            $('#mean-rapot-err').html(`* ${meanErrMsg}`)
             $('#mean-rapot-err').removeClass('d-none')
+
+            event.preventDefault()
+            return
+        }
+
+        const [rank, rankErrMsg] = validateRankAngkatan()
+        if (rankErrMsg) {
+            $('#rank-angkatan-err').html(`* ${rankErrMsg}`)
+            $('#rank-angkatan-err').removeClass('d-none')
 
             event.preventDefault()
             return
