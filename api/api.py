@@ -99,7 +99,7 @@ async def predict(nilai: float, rank: int, universitas: str, jurusan: str):
     rank = (CURRENT_YEAR_TOTAL_APPLICANTS + 1 - rank) / CURRENT_YEAR_TOTAL_APPLICANTS
 
     # jalankan logika klasifikasi
-    result = classifier.classify((keketatan, nilai, rank))
+    result = classifier.classify((keketatan, nilai, rank, f'{universitas}/{jurusan}'))
 
     cursor.close()
     return {'result': 'DITERIMA' if result == 1 else 'TIDAK DITERIMA'}
