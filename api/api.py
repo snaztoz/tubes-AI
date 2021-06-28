@@ -19,7 +19,7 @@ async def get_universitas():
     cursor = conn.cursor()
 
     result = []
-    for row in cursor.execute('SELECT DISTINCT universitas FROM Jurusan'):
+    for row in cursor.execute('SELECT DISTINCT pt FROM Jurusan'):
         result.append(row[0])
 
     cursor.close()
@@ -34,14 +34,16 @@ async def get_jurusan(universitas: Optional[str] = None):
     result = []
 
     if universitas:
-        query_result = cursor.execute(
-            'SELECT DISTINCT nama FROM Jurusan WHERE universitas=:universitas',
-            {'universitas': universitas}
+        query_result = cursor.execute('''
+            SELECT DISTINCT jurusan_fakultas FROM Jurusan WHERE pt=:pt
+            ''',
+            {'pt': universitas}
         )
     else:
-        query_result = cursor.execute('SELECT nama FROM Jurusan')
+        query_result = cursor.execute('SELECT DISTINCT jurusan_fakultas FROM Jurusan')
 
     for row in query_result:
         result.append(row[0])
 
+    cursor.close()
     return {'list-jurusan': result}
