@@ -3,6 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 import sqlite3
 
+import classifier
+
+
+CURRENT_YEAR = 2021
+CURRENT_YEAR_TOTAL_APPLICANTS = 303
+
+
 conn = sqlite3.connect('data-snmptn.db')
 app = FastAPI()
 
@@ -47,3 +54,32 @@ async def get_jurusan(universitas: Optional[str] = None):
 
     cursor.close()
     return {'list-jurusan': result}
+
+
+@app.get('/calculate')
+async def calculate(nilai: float, rank: int, universitas: str, jurusan: str):
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        SELECT
+            keketatan
+        FROM
+            JurusanPerTahun
+        JOIN
+            Jurusan ON Jurusan.id = JurusanPerTahun.id_jurusan
+        WHERE
+            tahun = :year
+            AND pt = :pt
+            AND jurusan_fakultas = :jurusan; 
+        ''',
+        {'year': CURRENT_YEAR, 'pt': universitas, 'jurusan': jurusan}
+    )
+
+    (keketatan) = cursor.fetchone()[0]
+    rank = (CURRENT_YEAR_TOTAL_APPLICANTS + 1 - rank) / CURRENT_YEAR_TOTAL_APPLICANTS
+
+    # jalankan logika klasifikasi
+    result = classifier.classify((keketatan, nilai, rank))
+
+    cursor.close()
+    return {'result': 'DITERIMA' if result == 1 else 'TIDAK DITERIMA'}
