@@ -25,11 +25,11 @@ $(document).ready(function() {
 
 
     /**
-     * Menjalankan kalkulasi prediksi di server. Lakukan sinkronisasi
-     * di caller.
+     * Mengirimkan request untuk menjalankan kalkulasi prediksi
+     * di server. Sinkronisasi dilakukan oleh caller fungsi ini.
      */
     function fetchPrediction(nilai, rank, universitas, jurusan) {
-        const url = 'http://localhost:8000/calculate'
+        const url = 'http://localhost:8000/predict'
                     + `?nilai=${nilai}`
                     + `&rank=${rank}`
                     + `&universitas=${universitas}`

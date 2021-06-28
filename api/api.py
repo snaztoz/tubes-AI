@@ -56,8 +56,8 @@ async def get_jurusan(universitas: Optional[str] = None):
     return {'list-jurusan': result}
 
 
-@app.get('/calculate')
-async def calculate(nilai: float, rank: int, universitas: str, jurusan: str):
+@app.get('/predict')
+async def predict(nilai: float, rank: int, universitas: str, jurusan: str):
     cursor = conn.cursor()
 
     cursor.execute('''
