@@ -14,7 +14,7 @@ UGM/Farmasi, FF
 UNS/Kedokteran, FK
 ITB/FTMD
 UNS/Kedokteran, FK
-ITS/Teknik Industri, FTIRS
+ITS/Teknik Industri, FTI
 ITB/FTI
 UNS/Kedokteran, FK
 ITB/FTTM
@@ -50,7 +50,7 @@ UGM/Farmasi, FF
 UNS/Kedokteran, FK
 ITB/FTSL
 UGM/Aktuaria, FMIPA
-ITS/Aristektur, FADP
+ITS/Arsitektur, FADP
 UGM/Teknik Sipil, FT
 UNS/Teknik Sipil, FT
 UGM/Akuntansi, FEB
